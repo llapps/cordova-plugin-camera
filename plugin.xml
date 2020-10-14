@@ -58,10 +58,10 @@
             <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
             <uses-permission android:name="android.permission.CAMERA" />
         </config-file>
-        <config-file target="AndroidManifest.xml" parent="application">
+         <config-file target="AndroidManifest.xml" parent="application">
           <provider
               android:name="org.apache.cordova.camera.FileProvider"
-              android:authorities="${applicationId}.provider"
+              android:authorities="${applicationId}.cordova.plugin.camera.provider"
               android:exported="false"
               android:grantUriPermissions="true" >
               <meta-data
