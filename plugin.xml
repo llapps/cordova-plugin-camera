@@ -71,7 +71,9 @@
           </provider>
         </config-file>
 
-
+<edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+   <application android:usesCleartextTraffic="true" android:requestLegacyExternalStorage="true"/>
+</edit-config>
 
         <source-file src="src/android/CameraLauncher.java" target-dir="src/org/apache/cordova/camera" />
         <source-file src="src/android/FileHelper.java" target-dir="src/org/apache/cordova/camera" />
