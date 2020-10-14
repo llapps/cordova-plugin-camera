@@ -59,6 +59,10 @@
             <uses-permission android:name="android.permission.CAMERA" />
         </config-file>
       
+      <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
+        <application android:requestLegacyExternalStorage="true" />
+    </edit-config>
+      
         <config-file target="AndroidManifest.xml" parent="application">
           <provider
               android:name="org.apache.cordova.camera.FileProvider"
