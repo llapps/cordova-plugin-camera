@@ -53,13 +53,13 @@
                 <param name="android-package" value="org.apache.cordova.camera.CameraLauncher"/>
             </feature>
         </config-file>
-        <config-file target="AndroidManifest.xml" parent="/*">
+        <config-file target="AndroidManifest.xml"  mode="merge" parent="/*">
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
             <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
             <uses-permission android:name="android.permission.CAMERA" />
         </config-file>
      
-        <config-file target="AndroidManifest.xml" parent="application">
+        <config-file target="AndroidManifest.xml"  mode="merge" parent="application">
           <provider
               android:name="org.apache.cordova.camera.FileProvider"
               android:authorities="${applicationId}.cordova.plugin.camera.provider"
